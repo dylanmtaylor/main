@@ -172,25 +172,29 @@ jobs:
             io.artifacthub.package.logo-url=https://avatars.githubusercontent.com/u/120078124?s=200&v=4
 
       # Build image using Buildah action
-      - name: Build Image
+      -
+        name: Build Image
         id: build_image
-        uses: redhat-actions/buildah-build@v2
+        uses: Wandalen/wretry.action@master
         with:
-          containerfiles: |
-            ./Containerfile
-          image: ${{ env.IMAGE_NAME }}
-          tags: |
-            ${{ steps.generate-tags.outputs.alias_tags }}
-          build-args: |
-            IMAGE_NAME=${{ matrix.image_name }}
-            SOURCE_ORG=${{ env.SOURCE_ORG }}
-            SOURCE_IMAGE=${{ env.SOURCE_IMAGE }}
-            FEDORA_MAJOR_VERSION=${{ matrix.major_version }}
-            RPMFUSION_MIRROR=${{ vars.RPMFUSION_MIRROR }}
-          labels: ${{ steps.meta.outputs.labels }}
-          oci: false
-          extra-args: |
-            --target=${{ matrix.build_target }}
+          action: redhat-actions/buildah-build@v2
+          attempt_limit: 3
+          with: |
+            containerfiles: |
+              ./Containerfile
+            image: ${{ env.IMAGE_NAME }}
+            tags: |
+              ${{ steps.generate-tags.outputs.alias_tags }}
+            build-args: |
+              IMAGE_NAME=${{ matrix.image_name }}
+              SOURCE_ORG=${{ env.SOURCE_ORG }}
+              SOURCE_IMAGE=${{ env.SOURCE_IMAGE }}
+              FEDORA_MAJOR_VERSION=${{ matrix.major_version }}
+              RPMFUSION_MIRROR=${{ vars.RPMFUSION_MIRROR }}
+            labels: ${{ steps.meta.outputs.labels }}
+            oci: false
+            extra-args: |
+              --target=${{ matrix.build_target }}
 
       # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
       # https://github.com/macbre/push-to-ghcr/issues/12
