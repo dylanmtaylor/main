@@ -1,5 +1,31 @@
 # Changelog
 
+## [2.1.0](https://github.com/dylanmtaylor/main/compare/v2.0.0...v2.1.0) (2024-03-03)
+
+
+### Features
+
+* Add Gnome EPUB files thumbnailing support ([#457](https://github.com/dylanmtaylor/main/issues/457)) ([1c73f37](https://github.com/dylanmtaylor/main/commit/1c73f37c8cf56adc8eb2260e9272f4546da006b8))
+* Adding gvfs-nfs package to silverblue image. ([#480](https://github.com/dylanmtaylor/main/issues/480)) ([c4b4cc7](https://github.com/dylanmtaylor/main/commit/c4b4cc737a3585182a0a537acf292386dae7c664))
+* allow rescue/emergency boot with grub cmdline args ([#488](https://github.com/dylanmtaylor/main/issues/488)) ([c2ad2bf](https://github.com/dylanmtaylor/main/commit/c2ad2bfe1d1642afeb1c2959e2630a16fb5ecd43))
+* Fedora 37 is EOL 2023-12-05 ([#442](https://github.com/dylanmtaylor/main/issues/442)) ([e84e7d8](https://github.com/dylanmtaylor/main/commit/e84e7d885b0d9b1da452187e0c92805883cf5a85))
+* leverage retry-action to increase reliability of builds. ([#503](https://github.com/dylanmtaylor/main/issues/503)) ([4dda9bc](https://github.com/dylanmtaylor/main/commit/4dda9bc864b3fcc807e85b6fab952d1fce9540ae))
+
+
+### Bug Fixes
+
+* add lazurite to the build matrix ([#458](https://github.com/dylanmtaylor/main/issues/458)) ([201844d](https://github.com/dylanmtaylor/main/commit/201844de237c3093d0dbff0985203130635c9371))
+* add mesa-filesystem package ([#455](https://github.com/dylanmtaylor/main/issues/455)) ([b226fe4](https://github.com/dylanmtaylor/main/commit/b226fe40c31e48f6cd9ed32c4766839b551b95e8))
+* add ublue-sulogin-generatore to image ([#511](https://github.com/dylanmtaylor/main/issues/511)) ([d794f4b](https://github.com/dylanmtaylor/main/commit/d794f4b8b03d32a09d1d850e34e9ae3bb9a00afb))
+* **ci:** never skip successful builds check ([#436](https://github.com/dylanmtaylor/main/issues/436)) ([d7f2918](https://github.com/dylanmtaylor/main/commit/d7f29187ef253beb097bb88d7337c61c9db4d44d))
+* Correct upstream podman issue ([#438](https://github.com/dylanmtaylor/main/issues/438)) ([bfee8ab](https://github.com/dylanmtaylor/main/commit/bfee8abfc16348fb4efde971df4351e7268346d7))
+* enable boot to tty for base image ([#424](https://github.com/dylanmtaylor/main/issues/424)) ([82ccb30](https://github.com/dylanmtaylor/main/commit/82ccb3090864279453a7871c236402715b10be03))
+* Enforce 64-bit version of mesa-va-drivers-freeworld ([#474](https://github.com/dylanmtaylor/main/issues/474)) ([472ed8a](https://github.com/dylanmtaylor/main/commit/472ed8a9f342f31d66b9327d921c780052569fe6))
+* **f39:** Restore cjk fonts ([#417](https://github.com/dylanmtaylor/main/issues/417)) ([3b3358e](https://github.com/dylanmtaylor/main/commit/3b3358ea0aabdd04539bae95668249a3a21f94e6))
+* remove lxqt 39 as lazurite replaced it ([#467](https://github.com/dylanmtaylor/main/issues/467)) ([cb54f2c](https://github.com/dylanmtaylor/main/commit/cb54f2c85b07e6a51dcfc6e2fd38fd6eb6647de1))
+* remove podman-compose ([#432](https://github.com/dylanmtaylor/main/issues/432)) ([2d7b47b](https://github.com/dylanmtaylor/main/commit/2d7b47b84e7153058a0cc72050ab97b84bb08436))
+* switch to distro bootc for F38 and F39 ([#426](https://github.com/dylanmtaylor/main/issues/426)) ([2bc3101](https://github.com/dylanmtaylor/main/commit/2bc3101c1a1bdffd45e2b0022e1946c10e175de4))
+
 ## [1.11.0](https://github.com/ublue-os/main/compare/v1.10.0...v1.11.0) (2023-11-08)
 
 
